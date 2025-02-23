@@ -3,7 +3,6 @@
 
 # In[8]:
 
-
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -12,6 +11,7 @@ from sklearn.preprocessing import OneHotEncoder,StandardScaler
 import matplotlib.pyplot as plt
 
 cars=pd.read_csv("C:/Users/himes/Machine Learning/Datasets/car_price/CarPrice_Assignment.csv")
+
 display(cars)
 
 
@@ -22,7 +22,7 @@ duplicate_count=sum(cars.duplicated())
 #print(duplicate_count)
 if duplicate_count>0:
     cars.drop_duplicates(inplace=True)
-#display(cars)
+display(cars)
 
 
 # In[11]:
@@ -55,7 +55,7 @@ cars_train.head()
 #cars_train_num=cars_train.drop(columns=["price"])
 #imputer.fit(cars_train_num)
 #cars_train_num_imputed=imputer.transform(cars_train_num)
-#display(cars_train_num_imputed)
+display(cars_train_num_imputed)
 
 
 # In[ ]:
